@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Category Prediction</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #004494;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #0056b3;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        nav a:hover {
+            background-color: #004494;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #004494;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Consumer Financial Protection Bureau
+    </header>
+
+    <div class="container">
+        <h2>Consumer Complaint Form</h2>
+        <form method="post">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="tel" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            <textarea name="complaint" rows="4" placeholder="Enter your complaint here..." required></textarea>
+            <button type="submit">File Complaint</button>
+        </form>
+        {% if submitted %}
+    <div class="container">
+        <h3>Confirmation</h3>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Phone:</strong> {{ phone }}</p>
+        <p><strong>Complaint:</strong> {{ complaint }}</p>
+        <p><strong>Predicted Product Department:</strong> {{ prediction_text }}</p>
+    </div>
+{% endif %}
+    </div>
+
+</body>
+</html>
