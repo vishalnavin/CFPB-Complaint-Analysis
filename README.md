@@ -1,7 +1,3 @@
-Certainly! Here’s a fresh version with a distinct tone and structure:
-
----
-
 # Consumer Complaints Project 🌍
 
 **Demo Available**: [Watch the Project Walkthrough](https://vimeo.com/940595873?share=copy)
