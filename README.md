@@ -1,3 +1,5 @@
+---
+
 # Consumer Complaints Project 🌍
 
 **Demo Available**: [Watch the Project Walkthrough](https://vimeo.com/940595873?share=copy)
@@ -13,6 +15,8 @@
   - [Requirements](#requirements)
   - [Installation](#installation)
 - [Key Project Phases](#key-project-phases)
+- [Files and Directory Structure](#files-and-directory-structure)
+
 ---
 
 ## Overview
@@ -111,5 +115,43 @@ jupyter notebook
 
 - **Deployment and Future Enhancements**
   - Deploy the model via Flask and plan future improvements, such as more advanced NLP techniques and multilingual capabilities.
+
+---
+
+## Files and Directory Structure 📂
+
+Here’s an overview of the main files and directories in the project:
+
+### Root Directory
+
+- **Flask Web App/**: Contains files related to the Flask-based web application.
+- **Images/**: Stores visual outputs like plots and word clouds.
+- **Jupyter notebooks/**: Houses Jupyter notebooks for various stages of analysis and modeling.
+- `Text Analytics Group Presentation.pdf`: PDF presentation summarising the project insights and findings.
+
+### Flask Web App
+
+- `filtered_data_new.csv`: Dataset used by the Flask app for predictions.
+- `model.pkl`: Serialized machine learning model for predicting complaint responses.
+- `tfidf.pkl`: Pre-trained TF-IDF vectorizer used for text input transformation.
+- `web_app.py`: Main Flask application script for running the web app.
+- **templates/**: Directory containing HTML templates for the web app interface.
+
+### Images
+
+- **Plots/**: Includes various data visualizations created during analysis.
+- **Wordclouds/**: Contains word clouds representing common terms in consumer complaints.
+
+### Jupyter Notebooks
+
+- `Company public response prediction.ipynb`: Predicts if a company will respond to a complaint.
+- `Company response consumer prediction.ipynb`: Analyzes consumer feedback and likelihood of company response.
+- `eda_main_file.ipynb`: Main exploratory data analysis (EDA) notebook.
+- `eda_satisfaction_scores.ipynb`: EDA on satisfaction scores and complaint factors.
+- `Product prediction.ipynb`: Model targeting product-related feedback.
+- `Satisfaction score.ipynb`: Detailed analysis of satisfaction scores.
+- `Word cloud.ipynb`: Generates word clouds to visualize common themes in complaints.
+- `filtered_dataset.csv`: Preprocessed dataset for EDA and modeling.
+- `vecSmall.csv`, `wfFile.csv`: Supporting datasets for data processing or training.
 
 ---
